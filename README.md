@@ -1,1 +1,4 @@
 # Retinal-Vessel-Segmentation
+| Title | Publication | Paper Link | Code Link | Datasets | Data Scale | Metrics & Results | Core Architecture | GPU |
+|-------|-------------|------------|-----------|----------|------------|-------------------|-------------------|-----|
+| Serp-Mamba: Advancing High-Resolution Retinal Vessel Segmentation With Selective State-Space Model | IEEE Trans. Medical Imaging (TMI), Vol.44, No.12, Dec 2025 | https://ieeexplore.ieee.org/document/11059897 | https://github.com/whq-xxh/Serp-Mamba | PRIME-FP20, MU-VS Center A, MU-VS Center B | PRIME-FP20: 15张/4000×4000; Center A/B: 各30张/3900×3072 | PRIME-FP20: Dice 69.01 / IoU 52.93 / MCC 68.41 / BM 65.75; Center A: 61.06 / 44.02 / 60.12 / 58.37; Center B: 57.10 / 40.06 / 56.30 / 53.92 | 基于 U-Net 架构融合 Mamba (状态空间模型)。核心包含两个创新模块：1) 蛇形交织自适应扫描机制 (SIA Scan)，能够沿着弯曲的血管纹理自适应提取长距离上下文特征；2) 模糊驱动的双重重校准模块 (ADDR)，专门捕获和优化血管与背景交界处模糊不清的硬样本像素，解决极度类别不平衡问题。 | NVIDIA Tesla V100 32GB |
